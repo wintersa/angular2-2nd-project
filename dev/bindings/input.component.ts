@@ -17,9 +17,10 @@ import {Component, EventEmitter} from 'angular2/core';
         <div>Filled out: {{isFilled ? 'Yes' : 'No'}}</div>
         <div>Valid: {{isValid ? 'Yes' : 'No'}}</div>
         <br>
-        <button [disabled]="!isValid">Submit</button>
+        <button [disabled]="!isValid" (click)="onSubmit()">Submit</button>
 
    `,
+   inputs: ['myself'],
    outputs: ['submitted']
 
  })
