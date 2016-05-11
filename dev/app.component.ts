@@ -13,8 +13,11 @@ import {PropertyBindingComponent} from './property-binding.component'
 
             <section class="child">
                 <my-property-binding [myName]="name"
-                [myAge]="31"></my-property-binding>
+                                     [myAge]="31"
+                                     (hobbiesChanged)="hobbies = $event">
+                </my-property-binding>
             </section>
+            <p>My hobbies are: {{hobbies}}</p>
         </section>
 
 
@@ -24,5 +27,6 @@ import {PropertyBindingComponent} from './property-binding.component'
 export class AppComponent {
     myName = '';
     myAge = '';
+    hobbies = '';
 
 }
