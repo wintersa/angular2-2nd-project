@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {Input} from 'angular2/core'
 
 @Component({
   selector: 'my-property-binding',
@@ -11,5 +12,5 @@ import {Component} from 'angular2/core';
 
 export class PropertyBindingComponent{
     name = '';
-    age = 20;
+    @Input('myAge') age = 20;
 }
